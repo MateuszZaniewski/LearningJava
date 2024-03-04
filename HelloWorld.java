@@ -1,10 +1,23 @@
 public class HelloWorld {
     public static void main(String[] args){
+        /* 
+        Typy prymitywne :
+        -byte
+        -short
+        -int
+        -long
+        -float
+        -double
+        -char
+        -boolean
+        */  
+
         byte byteVar = 1;
         System.out.println("Byte " + byteVar);
         short shortVar = 200;
         System.out.println("Short " + shortVar);
         int intVar = 21742000;
+        System.out.println(Integer.parseInt("35555"));
         System.out.println("Int " + intVar);
         long longVar = 1462487958;
         System.out.println("Long " + longVar);
@@ -18,6 +31,7 @@ public class HelloWorld {
         System.out.println("Boolean " + booleanVar);
         var varChar = true;
         System.out.println("var " + varChar);
+        
 
     }
 }
