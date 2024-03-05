@@ -1,0 +1,95 @@
+## Podstawy języka java ##
+
+## 1. Typy prymitywne :
+
+    - byte (0)
+    - short (0)
+    - int (0)
+    - long (0)
+    - float (0.0f)
+    - double (0.0d)
+    - char ("\u0000")
+    - boolean (false)
+
+Dla typów prymitywnych wartości i nazwy zmiennych przechowywane są w stosie (stacku).
+Każdy typ posiada wartość defaultową, w przypadku gdy nie zostanie nadana mu wartość
+Inicjowanie zmiennej :
+
+int a = 3
+float b = 3.0F
+byte c = 0
+    
+
+## 2. Przechowywanie zmiennych w pamięci :
+
+int a = 3 <-- zmienna 'a' wraz z wartością przechowywana jest w pamięci (stack)
+int b = a <-- zmienna 'b' posiada swoje unitatowe odniesienie w pamięci (stack)
+
+Integer c = 127 <-- zmienna 'c' jest wrapperem i posiada swoje odnesienie w stosie (heap) oraz nazwę zmiennej w pamięci (stack)
+Integer d = 127 <-- zmienna 'd' ma taką samą referencję w stosie jak Integer c
+
+Integer e = 128 <-- zmienna 'e' wykracza poza maksymalną wartość 127, jednak otrzymuje swoje miejsce w stosie (heap)
+Integer f = 128 <-- zmienna 'f' również wykracza poza wartość 127 jednak otrzymuje nową referencję (inną niż Integer 'e')
+
+## 3. Porównywanie zmiennych :
+- służy do tego operator porównania '=='
+- gdy chcemy porównać wartości (a nie referencję w stosie) używamy metody equals (a.equals(b))
+
+
+## 4. Inkrementacja i dekrementacja :
+- preinkrementacja : ++a
+- postinkrementacja : a++
+- predekrementacja : --a
+- postdekrementacja : a--
+
+## 5. System out, in i Scanner :
+
+Aby wyświetlić wartość w konsoli używamy System.out.println("Hello")
+
+Aby pobrać wartość od użytkownika importujemy Scanner :
+import java.util.Scanner;
+
+Tworzmy nowy scanner :
+Scanner sc = new Scanner(System.in)
+
+
+## 6. Instrukcje switch : 
+
+Stara kontrukcja switcha, gdzie każdy case trzeba oddzielić breakiem, by zatrzymać wykonywanie instrucji
+
+switch (choice) {
+            case value:{
+                ....
+                break;
+            }
+
+            case value: {
+                ....
+                break;
+            }
+
+            ....
+        
+            default:{
+                ...
+                break;
+            }
+                
+        }
+
+Nowa konstrukcja switcha (strzałkowa), nie wymaga breake :
+
+switch (choice) {
+            case value -> {
+                ...
+            }
+
+            case value2, value3, value4... -> {
+                ...
+            }
+
+            default -> {
+                ...
+            }
+                
+        }
