@@ -93,3 +93,27 @@ switch (choice) {
             }
                 
         }
+
+
+## 7. Arrays i arrayList :
+
+Deklaracja arraya - najpierw rodzaj zmiennej , po niej nawiasy kwadratowe i nazwa. Potem ewentualnie przypisanie wartości.
+int[] array1 = {1,2,3,4};
+
+- Definiowanie ArrayList : 
+ArrayList<Integer> array = new ArrayList<>();
+        array.add(1);  <-- dodajemy wartość 1 do arraya (push)
+        array.add(2);
+        array.add(3);
+
+        System.out.println(array.get(0)); <-- wyświetlamy wartość z indeksu 0
+
+        int[] array2 = new int[10];  <-- tworzenie arrayu bez podawania wartości, tylko ilośc elementów
+        array2[0] = 1;
+        array2[1] = 2;
+        array2[2] = 3;
+        array2[8] = 8;
+
+        Arrays.sort(array2);  <-- sortowanie Arraya
+        System.out.println(Arrays.toString(array2));  <-- zmiana na string dzięki czemu można wyświetlić array w konsoli :
+        "  [0, 0, 0, 0, 0, 0, 1, 2, 3, 8]  "
